@@ -1,9 +1,9 @@
-# Sublime Text 2 plugin: Simple Rails Navigator
+# Sublime Text 2 plugin: Simple Rails Navigator ([Chanko](https://github.com/cookpad/chanko) version)
 
 Simple plugin for navigating Ruby on Rails applications.
 
 This plugin provides commands for listing models, controllers, views, helpers,
-fixtures, tests/specs, javascript files, or stylesheets in a quick panel for
+fixtures, tests/specs, javascript files, stylesheets, or [Chanko](https://github.com/cookpad/chanko)'s unit files in a quick panel for
 easy selection.
 
 Related files are located at the top of the list so that they can be selected
@@ -18,6 +18,9 @@ called `test/unit/post_test.rb` or `spec/models/post_spec.rb`). If the
 application contains a `spec` directory, the plugin will search for specs and
 ignore the `test` directory; otherwise the `test` directory will be used.
 
+![editor](https://github.com/downloads/dddaisuke/SublimeRailsNav/editor.png)
+![filtered by sample](https://github.com/downloads/dddaisuke/SublimeRailsNav/filterd_by_sample.png)
+
 The following table shows which related files will be put at the top of the list:
 
 <table>
@@ -28,6 +31,10 @@ The following table shows which related files will be put at the top of the list
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>units</td>
+      <td>[Chanko](https://github.com/cookpad/chanko)'s unit</td>
+    </tr>
     <tr>
       <td>model</td>
       <td>controller; fixture; model unit test/model spec</td>
@@ -98,6 +105,10 @@ with the latest version.
 
 Alternatively, you can clone the repository directly from GitHub into your Packages directory:
 
+    git clone http://github.com/dddaisuke/SublimeRailsNav
+
+This original project is abave. If you don't need [Chanko](https://github.com/cookpad/chanko)'s fileter, use it.
+
     git clone http://github.com/noklesta/SublimeRailsNav
 
 ## Key bindings
@@ -114,7 +125,8 @@ in the console, try out the key combinations and see if anything is logged.
     { "keys": ["super+ctrl+x"], "command": "list_rails_fixtures" },
     { "keys": ["super+ctrl+t"], "command": "list_rails_tests" },
     { "keys": ["super+ctrl+i"], "command": "list_rails_javascripts" },
-    { "keys": ["super+ctrl+y"], "command": "list_rails_stylesheets" }
+    { "keys": ["super+ctrl+y"], "command": "list_rails_stylesheets" },
+    { "keys": ["super+ctrl+u"], "command": "list_chanko_units" }
 
 If you are using Vintage mode and want to use sequences of non-modifier keys,
 you can restrict the key bindings to command mode like this:
@@ -126,7 +138,8 @@ you can restrict the key bindings to command mode like this:
     { "keys": [" ", "x"], "command": "list_rails_fixtures", "context": [{"key": "setting.command_mode"}] },
     { "keys": [" ", "t"], "command": "list_rails_tests", "context": [{"key": "setting.command_mode"}] },
     { "keys": [" ", "i"], "command": "list_rails_javascripts", "context": [{"key": "setting.command_mode"}] },
-    { "keys": [" ", "y"], "command": "list_rails_stylesheets", "context": [{"key": "setting.command_mode"}] }
+    { "keys": [" ", "y"], "command": "list_rails_stylesheets", "context": [{"key": "setting.command_mode"}] },
+    { "keys": [" ", "u"], "command": "list_chanko_units", "context": [{"key": "setting.command_mode"}] }
 
 All commands are also available from the Command Palette (search for commands beginning with "Simple Rails Navigator").
 

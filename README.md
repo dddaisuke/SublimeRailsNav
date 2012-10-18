@@ -107,7 +107,7 @@ Alternatively, you can clone the repository directly from GitHub into your Packa
 
     git clone http://github.com/dddaisuke/SublimeRailsNav
 
-This original project is abave. If you don't need [Chanko](https://github.com/cookpad/chanko)'s fileter, use it.
+This original project is following. If you don't need [Chanko](https://github.com/cookpad/chanko)'s fileter, use it.
 
     git clone http://github.com/noklesta/SublimeRailsNav
 

@@ -33,7 +33,7 @@ The following table shows which related files will be put at the top of the list
   <tbody>
     <tr>
       <td>units</td>
-      <td>[Chanko](https://github.com/cookpad/chanko)'s unit</td>
+      <td><a href='https://github.com/cookpad/chanko'>Chanko</a>'s unit</td>
     </tr>
     <tr>
       <td>model</td>

@@ -114,6 +114,7 @@ class RailsCommandBase(sublime_plugin.WindowCommand, RailsMixin):
     VIEW_DIR = os.path.join('app', 'views')
     HELPER_DIR = os.path.join('app', 'helpers')
     FIXTURE_DIR = os.path.join('test', 'fixtures')
+    UNIT_DIR = os.path.join('app', 'units')
 
     def setup(self):
         self.root = self.rails_root()
@@ -362,3 +363,15 @@ class ListRailsStylesheetsCommand(RailsCommandBase):
 
     def is_listing_current_file_group(self, current_file):
         return 'stylesheets' in current_file
+
+class ListChankoUnitsCommand(RailsCommandBase):
+    def run(self):
+        if not self.setup():
+            return
+        self.show_files([['app', 'units']], '\.(?:js|coffee|s?css|rb|haml)$')
+
+    def construct_related_file_name_pattern(self, current_file):
+        return current_file
+
+    def is_listing_current_file_group(self, current_file):
+        return os.path.join('app', 'units') in current_file
